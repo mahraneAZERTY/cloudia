@@ -756,7 +756,7 @@ Navbar Area CSS
   width: 100%;
   height: auto;
   z-index: 999;
-  background-color: transparent;
+  background-color: #3a3a3a;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -769,7 +769,7 @@ Navbar Area CSS
   z-index: 999;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-  background: #ffffff !important;
+          background: #3a3a3a!important;
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
           animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   -webkit-transition: 0.5s;

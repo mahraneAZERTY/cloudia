@@ -55,7 +55,7 @@ this.password = "";
                
                 sessionStorage.setItem('currentUser', JSON.parse(data).key);
                     this.authenticationService.currentUserKey.next(sessionStorage.getItem('currentUser'));
-                this.router.navigate(['/home']); 
+                this.router.navigate(['/profile']); 
             });
     }
         this.loginForm = this.formBuilder.group({
@@ -88,16 +88,16 @@ this.password = "";
             .pipe(first())
             .subscribe(
 
-                (data: any) => {
+                data => {
                     if(this.f.remember.value === true){
                     this.cookieService.set( 'email', this.f.email.value,10 );
                     this.cookieService.set( 'password', this.f.password.value,10 );
                     this.cookieService.set( 'remember', this.f.remember.value,10 );
                         }
                     this.authenticationService.currentUser.next(true) ;
-                    sessionStorage.setItem('currentUser', JSON.parse(data).key);
+                    sessionStorage.setItem('currentUser', data.key);
                     this.authenticationService.currentUserKey.next(sessionStorage.getItem('currentUser'));
-                    this.router.navigate(['/home']); 
+                    this.router.navigate(['/profile']); 
                 },
                 error  => {
                     

@@ -1,17 +1,5 @@
 
-    <!-- Start Page Title Area -->
-    <div class="main-banner">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container-fluid">
-                    <div class="main-banner-content">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Page Title Area -->
+   
    <!--Start Page Register Form-->
     <body>   
     <div class="container" >
@@ -47,11 +35,15 @@
                             </div>
                         </div>
                         
+                        
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password"  placeholder="mot de passe"formControlName="password1" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password1.errors }" />
+                            <span class="input-group-text">
+                            <input type="password" id="password" placeholder="mot de passe"formControlName="password1" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password1.errors }" />
+                            <i  id="pass-status" aria-hidden="true" class="fa fa-eye"  onclick="if (password.type == 'text') password.type = 'password';
+                            else password.type = 'text';"></i></span>
                             <div *ngIf="submitted && f.password1.errors" class="invalid-feedback">
                                 <div *ngIf="f.password1.errors.required" >Password is required !</div>
                                 <div *ngIf="f.password1.errors.pattern" >Password must include minimum 8 characters at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character !</div>
@@ -61,7 +53,10 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password"  placeholder="Confirmer votre mot de passe" formControlName="password2" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password2.errors }" />
+                            <span class="input-group-text">
+                            <input type="password" id="password1" placeholder="Confirmer votre mot de passe" formControlName="password2" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password2.errors }" />
+                            <i  id="pass-status" aria-hidden="true" class="fa fa-eye"  onclick="if (password1.type == 'text') password1.type = 'password';
+                            else password1.type = 'text';"></i></span>
                             <div *ngIf="submitted && f.password2.errors" class="invalid-feedback">
                                 <div *ngIf="f.password2.errors.required">Password is required !</div>
                                 <div *ngIf="f.password2.errors.confirmedValidator" >Password and Confirm Password must be match !</div>

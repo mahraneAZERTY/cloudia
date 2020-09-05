@@ -2,6 +2,7 @@
 
 html,body{
     /*background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');*/
+    background-image: url(../../assets/img/main-banner.jpg);
     background-color: rgb(43, 40, 54);
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,10 +10,18 @@ html,body{
     font-family: 'Numans', sans-serif;
     }
     
+    .input-group-text{
+        width: 386px;
+      
+        color: black;
+        border:0 !important;
+    }
     .container{
-    height: 100%;
+
+    
+    height: 90%;
     align-content: center;
-    margin-top: -700px;
+    margin-top: 65px;
     }
     .card-footer{
         margin-top: -300px;  
